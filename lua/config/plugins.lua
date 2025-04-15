@@ -1,3 +1,4 @@
+-- harpoon
 local mark = require("harpoon.mark");
 local ui = require("harpoon.ui");
 
@@ -8,6 +9,8 @@ vim.keymap.set("n", "<leader>k", function() ui.nav_file(2) end);
 vim.keymap.set("n", "<leader>l", function() ui.nav_file(3) end);
 vim.keymap.set("n", "<leader>;", function() ui.nav_file(4) end);
 
+-- telescope
+
 local builtin = require('telescope.builtin');
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files);
@@ -15,6 +18,8 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files);
 vim.keymap.set('n', '<leader>fs', function()
     builtin.grep_string({ search = vim.fn.input("grep > ") });
 end)
+
+-- treesitter
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "c", "lua", "python", "javascript", "typescript" },
@@ -26,3 +31,6 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+-- undotree
+vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
