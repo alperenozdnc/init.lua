@@ -12,13 +12,11 @@ local builtin = require('telescope.builtin');
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files);
 vim.keymap.set('n', '<leader>fg', builtin.git_files);
--- note that ripgrep should be installed for this keymap to work
 vim.keymap.set('n', '<leader>fs', function()
     builtin.grep_string({ search = vim.fn.input("grep > ") });
 end)
 
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "c", "lua", "python", "javascript", "typescript" },
   sync_install = false,
   auto_install = true,
