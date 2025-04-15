@@ -34,3 +34,6 @@ require'nvim-treesitter.configs'.setup {
 
 -- undotree
 vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
+
+-- fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
