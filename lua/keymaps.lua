@@ -1,6 +1,6 @@
 vim.g.mapleader = " ";
 
-function keymap (mode, bind, action, opts)
+function keymap(mode, bind, action, opts)
 	vim.api.nvim_set_keymap(mode, bind, action, opts);
 end
 
