@@ -10,7 +10,6 @@ vim.keymap.set("n", "<leader>l", function() ui.nav_file(3) end);
 vim.keymap.set("n", "<leader>;", function() ui.nav_file(4) end);
 
 -- telescope
-
 local builtin = require('telescope.builtin');
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files);
@@ -31,7 +30,6 @@ require("telescope").setup {
 require("telescope").load_extension("ui-select");
 
 -- treesitter
-
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "c", "lua", "python", "javascript", "typescript" },
     sync_install = false,
