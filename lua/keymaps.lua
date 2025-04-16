@@ -8,6 +8,9 @@ end
 keymap("n", "<leader>w", ":w<CR>", { noremap = true }); -- writes changes
 keymap("n", "<leader>e", ":Ex<CR>", { noremap = true }); -- opens file explorer
 keymap("n", "<leader>q", ":q<CR>", { noremap = true }); -- opens file explorer
+keymap("n", "<C-j>", "<C-d>", { noremap = true, silent = true}); -- moves half page down
+keymap("n", "<C-k>", "<C-u>", { noremap = true, silent = true}); -- moves half page up 
+
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- copy selection to keyboard 
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
