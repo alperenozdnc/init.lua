@@ -108,6 +108,7 @@ lspconfig.lua_ls.setup({ capabilities = capabilities });
 lspconfig.clangd.setup({ capabilities = capabilities });
 lspconfig.eslint.setup({ capabilities = capabilities });
 lspconfig.pyright.setup({ capabilities = capabilities });
+lspconfig.gdscript.setup({ capabilities = capabilities });
 
 local diagnostics = {
     virtual_text = true, -- Disable builtin virtual text diagnostic
