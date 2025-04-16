@@ -51,4 +51,7 @@ return {
             "rafamadriz/friendly-snippets"
         }
     },
+    {
+        "m4xshen/autoclose.nvim"
+    }
 }

@@ -119,3 +119,6 @@ local diagnostics = {
 }
 
 vim.diagnostic.config(diagnostics);
+
+-- autoclose
+require("autoclose").setup()
