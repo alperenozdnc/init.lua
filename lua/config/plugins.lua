@@ -108,7 +108,12 @@ lspconfig.lua_ls.setup({ capabilities = capabilities });
 lspconfig.clangd.setup({ capabilities = capabilities });
 lspconfig.eslint.setup({ capabilities = capabilities });
 lspconfig.pyright.setup({ capabilities = capabilities });
+
+-- godot shenanigans
 lspconfig.gdscript.setup({ capabilities = capabilities });
+vim.keymap.set("n", "<leader>sg", function()
+    vim.fn.serverstart("127.0.0.1:6004");
+end, { noremap = true })
 
 local diagnostics = {
     virtual_text = true, -- Disable builtin virtual text diagnostic
