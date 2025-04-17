@@ -108,6 +108,7 @@ lspconfig.lua_ls.setup({ capabilities = capabilities });
 lspconfig.clangd.setup({ capabilities = capabilities });
 lspconfig.eslint.setup({ capabilities = capabilities });
 lspconfig.pyright.setup({ capabilities = capabilities });
+lspconfig.ts_ls.setup({ capabilities = capabilities });
 
 -- godot shenanigans
 lspconfig.gdscript.setup({ capabilities = capabilities });
